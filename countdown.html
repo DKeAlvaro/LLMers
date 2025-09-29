@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - LLMers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="logo-btn" onclick="goToHome()">
+                <img src="image.png" alt="LLMers Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>LLMers</h1>
+                    <span>AI Language Learning</span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="countdown-hero">
+            <div class="container">
+                <div class="countdown-content">
+                    <h2 class="countdown-title">Coming Soon</h2>
+                    
+                    <div class="countdown-timer">
+                        <div class="time-unit">
+                        <span class="time-number" id="days">30</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                    </div>
+
+                    <div class="email-signup">
+                        <h3 class="glow-text">Be the first to know</h3>
+                        <p>We respect your privacy. No spam, just launch updates.</p>
+                        <form class="signup-form" id="signup-form">
+                            <div class="input-group">
+                                <input type="email" id="email" placeholder="Enter your email address" required>
+                                <button type="submit" class="signup-btn glow-button">Notify Me</button>
+                            </div>
+                        </form>
+                        <div class="success-message" id="success-message" style="display: none;">
+                            <p>Thank you! We'll notify you when LLMers launches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LLMers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

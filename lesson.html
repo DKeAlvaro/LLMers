@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Lesson - LLMers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="logo-btn" onclick="goToHome()">
+                <img src="image.png" alt="LLMers Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>LLMers</h1>
+                    <span>AI Language Learning</span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="demo">
+            <div class="container">
+                <div class="lesson-intro">
+                    <h3>Try a Spanish Lesson</h3>
+                    <p class="lesson-subtitle">See how LLMers teaches through interactive conversations:</p>
+                    <button class="start-lesson-btn" style="opacity: 0;" onclick="startLessonDemo()">Start Lesson</button>
+                </div>
+                
+                <div class="lesson-demo" style="opacity: 0; display: none;">
+                    <div class="lesson-step active" id="step-1">
+                        <div class="step-header">
+                            <span class="step-number">1</span>
+                            <h4>Vocabulary - Ordering Coffee</h4>
+                        </div>
+                        <div class="vocabulary-cards">
+                            <div class="vocabulary-card">
+                                <div class="word-pair">
+                                    <span class="spanish">Un café, por favor</span>
+                                    <span class="english">A coffee, please</span>
+                                </div>
+                            </div>
+                            <div class="vocabulary-card">
+                                <div class="word-pair">
+                                    <span class="spanish">¿Cuánto cuesta?</span>
+                                    <span class="english">How much does it cost?</span>
+                                </div>
+                            </div>
+                            <div class="vocabulary-card">
+                                <div class="word-pair">
+                                    <span class="spanish">Con leche</span>
+                                    <span class="english">With milk</span>
+                                </div>
+                            </div>
+                            <div class="vocabulary-card">
+                                <div class="word-pair">
+                                    <span class="spanish">Gracias</span>
+                                    <span class="english">Thank you</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-step" id="step-2">
+                        <div class="step-header">
+                            <span class="step-number">2</span>
+                            <h4>
+                                <svg class="lightbulb-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 21C9 21.5523 9.44772 22 10 22H14C14.5523 22 15 21.5523 15 21V20H9V21Z" fill="#FCD34D"/>
+                                    <path d="M12 2C8.13401 2 5 5.13401 5 9C5 11.3869 6.22207 13.4869 8 14.7578V17C8 17.5523 8.44772 18 9 18H15C15.5523 18 16 17.5523 16 17V14.7578C17.7779 13.4869 19 11.3869 19 9C19 5.13401 15.866 2 12 2Z" fill="#FCD34D"/>
+                                    <path d="M9 19H15V20H9V19Z" fill="#F59E0B"/>
+                                </svg>
+                                Cultural Tip
+                            </h4>
+                        </div>
+                        <div class="grammar-tip">
+                            <p>In Spain, coffee is often a quick, standing drink at the bar. An espresso is a "café solo," and coffee with milk is a "café con leche."</p>                        </div>
+                    </div>
+
+                    <div class="lesson-step" id="step-3">
+                        <div class="step-header">
+                            <span class="step-number">3</span>
+                            <h4>Practice Conversation</h4>
+                        </div>
+                        <div class="conversation-demo">
+                            <div class="chat-container" id="chat-container">
+                                <div class="message ai-message">
+                                    <div class="avatar">
+                                        <img src="image.png" alt="Barista" class="avatar-image">
+                                    </div>
+                                    <div class="message-content">
+                                        <p>¡Hola! Welcome to our café. I'm your barista today.</p>
+                                        <p><em>Try ordering a coffee in Spanish</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-area">
+                                <input type="text" id="user-input" placeholder="Type your response in Spanish..." disabled>
+                                <button id="send-btn" disabled>Send</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-step" id="step-4">
+                        <div class="step-header">
+                            <span class="step-number">4</span>
+                            <h4>Progress & Feedback</h4>
+                        </div>
+                        <div class="progress-summary">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <p class="progress-text">Lesson Progress: <span id="progress-percent">0%</span></p>
+                            <div class="concepts-learned">
+                                <h5>Concepts Mastered:</h5>
+                                <ul id="concepts-list">
+                                    <li class="concept-item">Ordering coffee politely</li>
+                                    <li class="concept-item">Asking about prices</li>
+                                    <li class="concept-item">Using "por favor" and "gracias"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <button id="prev-btn" disabled>Previous</button>
+                        <button id="next-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LLMers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

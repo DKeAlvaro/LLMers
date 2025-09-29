@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMers - AI-Powered Language Learning</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button class="logo-btn" onclick="goToHome()">
+                <img src="image.png" alt="LLMers Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>LLMers</h1>
+                    <span>AI Language Learning</span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="landing-page">
+            <div class="container">
+                <div class="hero-title-container">
+                    <h2>Learn Languages Through Real Conversations</h2>
+                    <button class="arrow-btn" onclick="startLesson()">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <p>ChatGPT for Language Learning</p>
+                
+                <!-- Screenshots Carousel -->
+                <div class="carousel-container" id="screenshots-carousel">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            <!-- Sliding carousel slides -->
+                            <div class="carousel-slide active" data-slide="1">
+                                <img src="assets/Screenshot 1.png" alt="App Screenshot 1" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide" data-slide="2">
+                                <img src="assets/Screenshot 2.png" alt="App Screenshot 2" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide" data-slide="3">
+                                <img src="assets/Screenshot 3.png" alt="App Screenshot 3" class="carousel-image">
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LLMers. AI-powered language learning for everyone.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
