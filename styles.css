@@ -29,6 +29,12 @@ header {
     padding: 1rem 0;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo-btn {
     display: flex;
     align-items: center;
@@ -64,6 +70,29 @@ header {
     font-size: 0.9rem;
     color: white;
     opacity: 0.9;
+}
+
+/* Google Play Badge */
+.google-play-badge {
+    display: flex;
+    align-items: center;
+}
+
+.play-badge-img {
+    height: 45px;
+    width: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.play-badge-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Hide footer badge on desktop */
+.footer-badge {
+    display: none;
 }
 
 /* Hero Section */
@@ -241,6 +270,27 @@ header {
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* Hide header badge on mobile */
+    .header-content .google-play-badge {
+        display: none;
+    }
+    
+    /* Show footer badge on mobile */
+    .footer-badge {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-badge .play-badge-img {
+        height: 40px;
+    }
+    
     .carousel-container {
         margin-top: 2rem;
         padding: 0 10px;
@@ -262,6 +312,10 @@ header {
 }
 
 @media (max-width: 480px) {
+    .footer-badge .play-badge-img {
+        height: 35px;
+    }
+    
     .carousel-container {
         margin-top: 1.5rem;
         padding: 0 5px;
