@@ -61,20 +61,14 @@ function startLessonDemo() {
     const lessonIntro = document.querySelector('.lesson-intro');
     const lessonDemo = document.querySelector('.lesson-demo');
     
-    // Hide the intro section
+    // Hide the intro
     lessonIntro.style.transition = 'opacity 0.5s ease';
     lessonIntro.style.opacity = '0';
     
     setTimeout(() => {
         lessonIntro.style.display = 'none';
         lessonDemo.style.display = 'block';
-        lessonDemo.style.opacity = '0';
-        
-        // Show the lesson demo
-        setTimeout(() => {
-            lessonDemo.style.transition = 'opacity 0.5s ease';
-            lessonDemo.style.opacity = '1';
-        }, 100);
+        lessonDemo.style.opacity = '1';
     }, 500);
 }
 
